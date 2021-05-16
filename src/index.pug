@@ -1,0 +1,148 @@
+- var cards = [ { title: 'Animal Protein', copy: 'Plan your next beach trip with these fabulous destinations', button: 'View Trips' }, { title: 'Commodities & Technical Specification', copy: 'It\'s the desert you\'ve always dreamed of', button: 'Book Now' }, { title: 'Energy & Mining', copy: 'Seriously, straight up, just blast off into outer space today', button: 'Book Now' }]
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    //HERO
+    section#hero
+      .container.vh-100
+        nav.navbar.navbar-expand-lg.navbar-light
+          .container-fluid
+            a.navbar-brand(href='#')
+              img(src="/assets/logo.png", width="65" height="65") 
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+              ul.navbar-nav.ms-auto
+                li.nav-item
+                  a.nav-link.active(aria-current='page' href='#') Home
+                li.nav-item
+                  a.nav-link(href='#') Products
+                li.nav-item
+                  a.nav-link(href='#') Company Details
+                li.nav-item
+                  a.nav-link(href='#' tabindex='-1' aria-disabled='true') Contact 
+        .row.align-items-center
+          #text-hero.col-md-6.align-self-center
+            h1#title-hero
+              | Integrated Solutions in 
+              em International Trade
+              |  and 
+              em Logistics Services.
+            h4 
+              |foreign trade specialist of 
+              strong#typewriter
+            a.btn.btn-primary Know More
+          .col-md-6.text-center
+            object(data="assets/illustration.svg" ).img-fluid
+
+    section#commo
+      .container.vh-75
+        .row.align-items-center.h-100
+          .col-md-6.align-self-center
+            img(src="assets/ship.png", alt="", srcset="").img-fluid
+          #commo-text.col-md-6.align-self-center
+            h4 CIF to any seaport in the world. We are connected to the largest suppliers of animal protein in the South and North and we also work with sugar, soybeans, rice, Yellow Corn, oils and agricultural inputs for export. 
+            p foreign trade specialist of grains and agricultural inputs, animal protein, energy and mining.
+            a.btn.btn-primary See Our Products
+            
+    section#our-products
+      .container.vh-100
+        .h-100.d-flex.align-items-center.justify-content-center.flex-column
+          h3.text-center Our Products
+          mixin card(title, copy, button)
+            .card
+              .content
+                h2.title= title
+                p.copy= copy
+                button.btn= button
+
+          main.page-content
+            each card in cards
+              +card(card.title, card.copy, card.button)
+            
+            
+    section#video
+      .container
+        .row.align-items-center.h-100
+          #text-video.col-md-6.align-self-center
+            h4 Specialized Company in Provide Integrated Solutions in International Trade and Logistics Services.
+            p We are synonymous of international excellence as a company potentially prepared to stimulate and assume new challenges in the most diverse segments of the world economy, improving every day its portfolio of products and services.
+            p Always seeking market solutions that can help facilitate international trade operations to customers and partners, keeping a permanent technical improvement of our functional team to be interacting with what is newest and most modern in the market.
+            p Our challenge is to participate in the market in a competitive way, honouring our commitments and always seeking our clients' satisfaction.
+            a.btn.btn-primary See Our Products
+          .col-md-6.align-self-center.d-flex.justify-content-center
+            video#player(playsinline='' controls='' data-poster='')
+              source(src='/assets/video.webm' type='video/webm') 
+
+    section#form-footer.vh-100.vw-100
+        .container.h-100.d-flex.align-items-center.justify-content-center.flex-column
+          .form-box 
+            h4.text-center Fill in the form below with your request that we will contact you.
+            .row
+              .col 
+                input.form-control(placeholder='Email*')
+              .col 
+                input.form-control(placeholder='Company Name*')
+            .row
+              .col-md-8 
+                input.form-control(placeholder='Full Name*')
+              .col.md-4
+                input.form-control(placeholder='(00) 00000-0000')
+            .form-group
+              textarea#form-footer-textarea.form-control(rows='6', placeholder='Hi, I want a quotation and information about the PRODUCT X and QUANTITY Y. Our company is located in COUNTRY Z. I would like to be contacted via E-MAIL/PHONE/Whatsapp.')
+            .form-check
+              .row
+                .col.d-flex.flex-column
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Industry / Manufacturer
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Buying Office
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Distributor / Wholesaler
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Business Service
+                .col.d-flex.flex-column
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Importer / Trading Company
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Representative / Agent
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Government
+                  .box-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Retailer
+              
+            a.btn.btn-primary Send
+          p Rua Gervasio Francisco Regis, Itajaí- Santa Catarina, Brazil
+          p +55 11 5097-9492 / +55 11 98913-3675
+          p daquil@b2brazil.com
+              
+              
+              
+              
+              
+              
+              
+
+    script(src="./index.js")
+    script(src="https://unpkg.com/typewriter-effect@latest/dist/core.js") 

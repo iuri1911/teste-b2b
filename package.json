@@ -1,0 +1,30 @@
+{
+  "name": "test-b2b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "pug": "^3.0.2",
+    "sass": "^1.32.13"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "assemble": "~0.3.11",
+    "bootstrap": "^5.0.1",
+    "grunt": "~0.4.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "styles": "^0.2.1",
+    "typewriter-effect": "^2.17.0"
+  }
+}

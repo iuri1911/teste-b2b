@@ -1,0 +1,176 @@
+@import "~bootstrap/scss/bootstrap"
+@import "card.scss"
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap')
+
+*
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  scroll-behavior: smooth
+
+body, html
+  font-family: 'Open Sans', sans-serif
+  overflow-x: hidden
+
+input, textarea
+  outline: none
+  box-shadow: none !important
+  border: 2px solid #EBD07B !important
+.form-check-input:checked
+  background-color: #ebc95a
+
+.btn-primary
+  padding: 14px 36px
+  background: #D9A648
+  border-radius: 5px
+.btn
+  background: #D9A648
+.btn-primary:hover
+  box-shadow: 0px 18px 38px rgba(0, 0, 0, 0.08), 0px 10.5984px 19.8208px rgba(0, 0, 0, 0.057856), 0px 5.4432px 9.3024px rgba(0, 0, 0, 0.044928), 0px 2.1888px 4.0736px rgba(0, 0, 0, 0.035072), 0px 0.4896px 1.7632px rgba(0, 0, 0, 0.022144)
+
+#hero .container .row
+  height: 90%
+
+#hero .nav-link
+  padding: 8px 22px
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active
+  color: #D9A648
+
+#title-hero
+  font-weight: 300
+  font-size: 48px
+  line-height: 65.37px
+
+#title-hero em
+  font-weight: 400
+  font-style: normal
+  color: #D9A648
+
+#hero strong
+  color: #D9A648
+  font-weight: 500
+h4
+  font-weight: 400
+  font-size: 24px
+  line-height: 32.68px
+  padding-right: 42px
+
+#commo img
+  filter: blur(0) drop-shadow(0px 10px 30px rgba(0,0,0,0.35))
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1)
+
+#commo img:hover
+  transform: scale(1.05)
+  filter: blur(0) drop-shadow(0px 40px 70px rgba(0,0,0,0.35))
+
+#commo-text
+  padding-left: 64px
+
+#our-products h3
+  padding-bottom: 68px
+  font-size: 48px
+  font-weight: 700
+
+#our-products .container .row
+  height: 90%
+
+#video
+  height: 70vh
+#text-video
+  padding-right: 98px
+#player
+  width: 90%
+
+#form-footer
+  background-image: url("/assets/footer-background.svg")
+  background-position: cover
+
+#form-footer h4
+  text-align: center
+  padding: 0 0 24px 0
+
+#form-footer .form-box
+  background-color: white
+  padding: 28px
+  border: 5px solid rgba(217, 166, 72, 0.86) !important
+  border-radius: 12px
+  min-width: 700px
+  margin: 68px 0 28px 0
+
+#form-footer input.form-control, #form-footer-textarea
+  border: 2px solid #EBD07B
+  box-sizing: border-box
+  border-radius: 8px
+  margin: 12px 0
+
+#form-footer .box-check
+  padding: 8px 0
+
+#form-footer p
+  color: white
+  margin-bottom: 4px
+
+@media (max-width: 768px)
+  #hero
+    padding-bottom: 78px
+  #hero h1
+    font-size: 36px
+    text-align: center
+    line-height: 45.37px
+  #hero h4
+    text-align: center
+    font-size: 14px
+    padding-bottom: 14px
+  #hero a
+    text-align: center
+    margin: 0
+  #text-hero
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+  #commo
+    padding-bottom: 158px
+  #commo img
+    padding-bottom: 88px
+  #commo h4
+    font-size: 18px
+    text-align: center
+  #commo p
+    color: gray
+    text-align: center
+  #commo-text
+    padding: 8px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+  #commo-text h4
+    padding: 8px
+
+  #our-products .page-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  #our-products
+    padding-bottom: 108px
+
+  #text-video
+    text-align: center
+    padding: 8px 8px 48px 8px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+  #text-video h4
+    padding: 8px
+
+  #video
+    margin-bottom: 400px
+  #form-footer
+    height: 115vh !important
+  #form-footer .form-box
+    min-width: 400px
